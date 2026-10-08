@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datu lapas — EN + LV</title>
+<style>
+  @font-face { font-family:'DM Sans'; src:url('/fonts/DMSans-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face { font-family:'DM Sans'; src:url('/fonts/DMSans-Bold.ttf') format('truetype'); font-weight:700; font-display:swap; }
+
+  :root{
+    --ink:#14181C; --steel:#5B6773; --rule:#DDE3E8;
+    --tray:#EEF2F5; --paper:#fff; --cyan:#009FE3; --amber:#A8620A;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; padding:44px 24px 80px;
+    font:400 15px/1.5 'DM Sans',system-ui,sans-serif;
+    color:var(--ink); background:var(--tray);
+  }
+  .wrap{max-width:880px; margin:0 auto}
+
+  h1{font-size:24px; line-height:1.2; margin:0 0 6px; letter-spacing:-.01em}
+  .lede{margin:0 0 30px; color:var(--steel); max-width:60ch}
+
+  /* ---------- ievades zona ---------- */
+  .drop{
+    display:block; background:var(--paper); border:1px solid var(--rule);
+    border-radius:3px; padding:34px 28px; text-align:center; cursor:pointer;
+    transition:border-color .12s, background-color .12s;
+  }
+  .drop:hover{border-color:#B9C4CC}
+  .drop:focus-within{outline:2px solid var(--cyan); outline-offset:2px}
+  .drop.hot{border-color:var(--cyan); background:#F5FBFE}
+  .drop input{position:absolute; width:1px; height:1px; opacity:0; pointer-events:none}
+  .drop .h{font-weight:700; margin:16px 0 4px}
+  .drop .s{color:var(--steel); font-size:13.5px}
+  .pages{display:block; margin:0 auto}
+
+  /* ---------- rezultāti ---------- */
+  section{margin-top:34px}
+  h2{font-size:15px; margin:0 0 12px; letter-spacing:.01em}
+  .panel{background:var(--paper); border:1px solid var(--rule); border-radius:3px}
+
+  table{width:100%; border-collapse:collapse; font-size:14px}
+  th{
+    text-align:left; font-weight:700; font-size:12.5px; color:var(--steel);
+    padding:10px 14px; border-bottom:1px solid var(--rule);
+  }
+  td{padding:11px 14px; border-bottom:1px solid #F0F3F5; vertical-align:middle}
+  tr:last-child td{border-bottom:0}
+  .fname{font-weight:500; word-break:break-all}
+  .num{font-variant-numeric:tabular-nums}
+  .warn{color:var(--amber)}
+  .bad{color:#B3261E}
+  a.dl{color:var(--cyan); font-weight:700; text-decoration:none; white-space:nowrap}
+  a.dl:hover{text-decoration:underline}
+
+  /* ---------- vārdnīcas rindas ---------- */
+  .word{
+    display:grid; grid-template-columns:1fr 168px 1fr; gap:10px;
+    align-items:center; padding:11px 14px; border-bottom:1px solid #F0F3F5;
+  }
+  .word:last-child{border-bottom:0}
+  .en{font-size:14px; word-break:break-word}
+  select,input[type=text]{
+    font:inherit; font-size:14px; color:var(--ink); background:var(--paper);
+    border:1px solid var(--rule); border-radius:3px; padding:7px 9px; width:100%;
+  }
+  input[type=text]:focus,select:focus{outline:2px solid var(--cyan); outline-offset:0; border-color:var(--cyan)}
+
+  .bar{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:14px}
+  button{
+    font:inherit; font-weight:700; font-size:14px; cursor:pointer;
+    background:var(--cyan); color:#fff; border:1px solid var(--cyan);
+    border-radius:3px; padding:9px 16px;
+  }
+  button:hover{background:#0090CE}
+  button.quiet{background:var(--paper); color:var(--ink); border-color:var(--rule)}
+  button.quiet:hover{background:#F7F9FA}
+  button:disabled{opacity:.5; cursor:default}
+  button:focus-visible{outline:2px solid var(--ink); outline-offset:2px}
+
+  .note{color:var(--steel); font-size:13.5px; margin:0 0 12px; max-width:66ch}
+  .foot{margin-top:36px; color:var(--steel); font-size:13px}
+  .hidden{display:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  @media (max-width:620px){ .word{grid-template-columns:1fr; gap:6px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Datu lapas divās valodās</h1>
+  <p class="lede">Ievelc Schäfer + Peters datu lapas. Katra iznāk kā divu lappušu PDF:
+     oriģināls angliski, tad tas pats latviski.</p>
+
+  <label class="drop" id="drop">
+    <input type="file" id="pick" multiple accept="application/pdf">
+    <svg class="pages" width="96" height="60" viewBox="0 0 96 60" aria-hidden="true">
+      <rect x="4.5" y="4.5" width="40" height="51" fill="#fff" stroke="#C3CDD4"/>
+      <rect x="51.5" y="4.5" width="40" height="51" fill="#fff" stroke="#009FE3"/>
+      <g fill="#C3CDD4">
+        <rect x="11" y="13" width="18" height="3"/><rect x="11" y="22" width="26" height="2"/>
+        <rect x="11" y="28" width="26" height="2"/><rect x="11" y="34" width="20" height="2"/>
+      </g>
+      <g fill="#9CD9F3">
+        <rect x="58" y="13" width="18" height="3"/><rect x="58" y="22" width="26" height="2"/>
+        <rect x="58" y="28" width="26" height="2"/><rect x="58" y="34" width="20" height="2"/>
+      </g>
+      <text x="24.5" y="49" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#5B6773">EN</text>
+      <text x="71.5" y="49" text-anchor="middle" font-family="DM Sans" font-size="8" font-weight="700" fill="#009FE3">LV</text>
+    </svg>
+    <div class="h">Ievelc PDF failus šeit</div>
+    <div class="s">vai noklikšķini, lai izvēlētos — var vairākus uzreiz</div>
+  </label>
+
+  <section id="results" class="hidden">
+    <h2>Rezultāts</h2>
+    <div class="panel">
+      <table>
+        <thead><tr>
+          <th style="width:52%">Fails</th><th style="width:22%">Vārdnīca</th><th>Lejupielāde</th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div class="bar">
+      <button id="zip" class="quiet">Lejupielādēt visu (ZIP)</button>
+      <span class="s" id="outdir"></span>
+    </div>
+  </section>
+
+  <section id="words" class="hidden">
+    <h2>Šie teksti vārdnīcā nav</h2>
+    <p class="note">Tie palika angliski, lai nekas netiktu izdomāts. Ieraksti latviešu
+       tulkojumu, un tas tiks saglabāts uz visām nākamajām reizēm.</p>
+    <div class="panel" id="wordrows"></div>
+    <div class="bar">
+      <button id="save">Saglabāt un pārtaisīt</button>
+      <span class="s" id="savemsg"></span>
+    </div>
+  </section>
+
+  <p class="foot" id="foot"></p>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+let batch = null, outs = [], kinds = {};
+
+function esc(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+async function glossaryCount(){
+  if(location.protocol === 'file:'){
+    $('#foot').innerHTML = '<b class="bad">Šī lapa atvērta kā fails, tāpēc apstrāde nestrādās.</b>'
+      + ' Atver <a href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a>';
+    return;
+  }
+  let d;
+  try{
+    const r = await fetch('/api/glossary'); d = await r.json();
+  }catch(e){
+    $('#foot').textContent = 'Nav savienojuma ar serveri. Vai melnais logs ir atvērts?';
+    return;
+  }
+  kinds = d.kinds;
+  const n = Object.values(d.glossary)
+    .filter(v => !Array.isArray(v))
+    .reduce((a,v) => a + Object.keys(v).length, 0);
+  $('#foot').textContent = `Vārdnīcā ${n} ieraksti. Gatavie faili glabājas mapē out/.`;
+}
+
+function render(d){
+  batch = d.batch; kinds = d.kinds; outs = [];
+  $('#rows').innerHTML = d.results.map(r => {
+    if(!r.ok) return `<tr><td class="fname">${esc(r.name)}</td>
+      <td class="bad" colspan="2">Neizdevās: ${esc(r.error||'')}</td></tr>`;
+    outs.push(r.out);
+    const g = r.missing
+      ? `<span class="warn num">${r.missing} teksti trūkst</span>`
+      : `<span class="num">pilnībā latviski</span>`;
+    return `<tr><td class="fname">${esc(r.name)}</td><td>${g}</td>
+      <td><a class="dl" href="/out/${encodeURIComponent(r.out)}">2 lpp. PDF</a></td></tr>`;
+  }).join('');
+  $('#results').classList.remove('hidden');
+
+  if(d.unknown.length){
+    $('#wordrows').innerHTML = d.unknown.map((u,i) => `
+      <div class="word">
+        <div class="en">${esc(u.en)}</div>
+        <select data-i="${i}" class="k">${
+          Object.entries(kinds).map(([k,v]) =>
+            `<option value="${k}"${k===u.kind?' selected':''}>${esc(v)}</option>`).join('')
+        }</select>
+        <input type="text" class="lv" data-i="${i}" data-en="${esc(u.en)}"
+               placeholder="latviski" autocomplete="off">
+      </div>`).join('');
+    $('#words').classList.remove('hidden');
+  } else {
+    $('#words').classList.add('hidden');
+  }
+  glossaryCount();
+}
+
+function fail(msg){
+  $('#rows').innerHTML = `<tr><td colspan="3" class="bad">${esc(msg)}</td></tr>`;
+  $('#results').classList.remove('hidden');
+}
+
+async function upload(files){
+  const pdfs = [...files].filter(f => /\.pdf$/i.test(f.name));
+  if(!pdfs.length){ fail('Neviens no ievilktajiem failiem nav PDF.'); return; }
+  if(location.protocol === 'file:'){
+    fail('Šī lapa atvērta kā fails. Atver http://127.0.0.1:5000/ , lai apstrāde strādātu.');
+    return;
+  }
+  $('#rows').innerHTML = `<tr><td colspan="3">Apstrādā ${pdfs.length} failus…</td></tr>`;
+  $('#results').classList.remove('hidden');
+  const fd = new FormData();
+  pdfs.forEach(f => fd.append('files', f));
+  try{
+    const r = await fetch('/api/process', {method:'POST', body:fd});
+    if(!r.ok){ fail(`Serveris atbildēja ar kļūdu ${r.status}. Skaties melnajā logā.`); return; }
+    render(await r.json());
+  }catch(e){
+    fail('Neizdevās sasniegt serveri. Pārbaudi, vai melnais logs vēl ir atvērts.');
+  }
+}
+
+$('#pick').addEventListener('change', e => upload(e.target.files));
+
+const drop = $('#drop');
+['dragenter','dragover'].forEach(t => drop.addEventListener(t, e => {
+  e.preventDefault(); drop.classList.add('hot');
+}));
+['dragleave','drop'].forEach(t => drop.addEventListener(t, e => {
+  e.preventDefault(); drop.classList.remove('hot');
+}));
+drop.addEventListener('drop', e => upload(e.dataTransfer.files));
+
+$('#save').addEventListener('click', async () => {
+  const items = [...document.querySelectorAll('input.lv')].map(inp => {
+    const sel = document.querySelector(`select.k[data-i="${inp.dataset.i}"]`);
+    return {en: inp.dataset.en, lv: inp.value, kind: sel.value};
+  }).filter(x => x.lv.trim());
+  if(!items.length){ $('#savemsg').textContent = 'Vispirms ieraksti kādu tulkojumu.'; return; }
+  $('#save').disabled = true; $('#savemsg').textContent = 'Saglabā…';
+  try{
+    await fetch('/api/glossary', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({items})});
+    const r = await fetch('/api/rebuild', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({batch})});
+    render(await r.json());
+    $('#savemsg').textContent = `Saglabāti ${items.length} vārdi, faili pārtaisīti.`;
+  }catch(e){
+    $('#savemsg').textContent = 'Neizdevās saglabāt — pārbaudi savienojumu.';
+  }
+  $('#save').disabled = false;
+});
+
+$('#zip').addEventListener('click', async () => {
+  if(!outs.length) return;
+  const r = await fetch('/api/zip', {method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({names: outs})});
+  const b = await r.blob();
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(b); a.download = 'datu_lapas_EN-LV.zip'; a.click();
+});
+
+glossaryCount();
+</script>
+</body>
+</html>

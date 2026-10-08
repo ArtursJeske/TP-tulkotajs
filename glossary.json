@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "Technical data": "Tehniskie dati",
+    "FEATURES": "RAKSTUROJUMS",
+    "Features": "Raksturojums",
+    "Applications": "Pielietojums",
+    "Area of use": "Izmantošanas jomas"
+  },
+  "labels": {
+    "Item number:": "Artikula Nr.:",
+    "Materials:": "Materiāls:",
+    "EAN/GTIN:": "EAN/GTIN:",
+    "Net weight per 100 pc.:": "Neto svars 100 gab.:",
+    "Number per package (VPE):": "Skaits iepakojumā (VPE):",
+    "Diameter (d):": "Diametrs (d):",
+    "Total length (l):": "Kopējais garums (l):",
+    "Type of thread:": "Vītnes tips:",
+    "Height of head (k):": "Galvas augstums (k):",
+    "Corner measurement (e):": "Izmērs pa diagonāli (e):",
+    "Head shape:": "Galvas forma:",
+    "Drive size:": "Atslēgas izmērs:",
+    "Drive shape (drive):": "Uzgriešanas veids:",
+    "strength class (Rm):": "Stiprības klase (Rm):",
+    "Height (m):": "Augstums (m):",
+    "Inner diameter (d1):": "Iekšējais diametrs (d1):",
+    "Outer diameter (d2):": "Ārējais diametrs (d2):",
+    "Measurement h (h):": "Biezums (h):",
+    "Hardness:": "Cietība:",
+    "Diameter of head (dk):": "Galvas diametrs (dk):",
+    "Hex height (h):": "Hex augstums (h):",
+    "Measurement t (t):": "Mērījums t (t):"
+  },
+  "product_types": {
+    "Hexagon head screws": "Seškanšu galvas skrūves",
+    "Hexagon nuts": "Seškanšu uzgriežņi",
+    "Washers type A": "Paplāksnes, A tips",
+    "Hexagon domed cap nuts": "Sešstūra kupolveida uzgriežņi",
+    "Hexagon socket button head screws with fullthread": "Skrūves ar pusapaļu galvu un iekšējo sešstūri, ar pilnu vītni"
+  },
+  "values": {
+    "Metric": "Metriska",
+    "Outer hex": "Ārējais seškantis",
+    "Inner hex": "Iekšējais seškantis",
+    "Hexagonal head": "Seškanšu galva",
+    "type A": "A tips",
+    "Machine construction": "Mašīnbūve",
+    "Metal construction": "Metāla konstrukcijas",
+    "Facade": "Fasādes",
+    "Solar": "Saules enerģētika",
+    "SW 2,5": "SW 2,5",
+    "125-16A2": "125-16A2",
+    "125-18A2": "125-18A2",
+    "125-20A2": "125-20A2",
+    "125-22A2": "125-22A2",
+    "125-4A2": "125-4A2",
+    "125-5A2": "125-5A2",
+    "7380-10*80A2": "7380-10*80A2",
+    "pan head": "Pusapaļa galva",
+    "Hexagonal socket": "Iekšējais sešstūris",
+    "Other applications": "Citi pielietojumi",
+    "7380-12*40A2": "7380-12*40A2",
+    "7380-12*45A2": "7380-12*45A2",
+    "7380-12*35A2": "7380-12*35A2"
+  },
+  "sentences": {
+    "Ideal for screw connections in the machine and Metal construction area.": "Ideāli piemērotas skrūvsavienojumiem mašīnbūvē un metāla konstrukcijās.",
+    "Sheet metal screw in the bathroom - and heating": "Skārda skrūve santehnikas un apkures montāžai.",
+    "Use in damp rooms and outdoor applications without significant levels of chlorides and Schwefeldioxyden": "Izmantošanai mitrās telpās un ārpus telpām, ja vidē nav būtiska hlorīdu un sēra dioksīda daudzuma"
+  },
+  "units": [
+    [
+      "St.",
+      "gab."
+    ],
+    [
+      "pc.",
+      "gab."
+    ]
+  ]
+}

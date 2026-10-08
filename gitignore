@@ -1,0 +1,21 @@
+# Darba mapes (augšupielādētie oriģināli un gatavie PDF)
+out/
+uploads/
+
+# Fonti tiek uzģenerēti ar setup_fonts.py pirmajā palaišanā
+fonts/*.ttf
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sistēmas faili
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Darba Excel kopija (vārdnīcas avots ir glossary.json)
+glosarijs_EN-LV.xlsx
+~$*.xlsx
